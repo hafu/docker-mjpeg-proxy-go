@@ -5,6 +5,8 @@ on:
     # Publish `$default-branch` as Docker `latest` image.
     branches:
       - $default-branch
+      - master
+      - main
   schedule:
     # rebuild image every week (includes also package updates)
     - cron: '5 3 * * 0'
