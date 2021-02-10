@@ -38,12 +38,18 @@ hafu/mjpeg-proxy-go mjpeg-proxy -sources /srv/sources.json
 Usage of mjpeg-proxy:
   -bind string
         proxy bind address (default ":8080")
+  -clientheader string
+        request header with client address
   -maxprocs int
         limit number of CPUs used
   -password string
         source uri password
   -path string
         proxy serving path (default "/")
+  -rate float
+        limit output frame rate
+  -sendbuffer int
+        limit buffering of frames (default 4096)
   -source string
         source uri (default "http://example.com/img.mjpg")
   -sources string
