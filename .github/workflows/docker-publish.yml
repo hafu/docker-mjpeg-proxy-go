@@ -5,6 +5,9 @@ on:
     # Publish `$default-branch` as Docker `latest` image.
     branches:
       - $default-branch
+  schedule:
+    # rebuild image every week (includes also package updates)
+    - cron: '5 3 * * 0'
 
 env:
   IMAGE_NAME: mjpeg-proxy-go
@@ -12,7 +15,6 @@ env:
 jobs:
   multi-arch-build-and-push:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
 
     steps:
       - name: Checkout
