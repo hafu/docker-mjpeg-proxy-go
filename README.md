@@ -61,5 +61,4 @@ Usage of mjpeg-proxy:
 ```
 
 ## TODO
-- [ ] User
 - [ ] Variables
