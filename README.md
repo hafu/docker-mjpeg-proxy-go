@@ -1,6 +1,6 @@
 # mjpeg-proxy-go
 
-This is the Dockerfile for the [mjpeg-proxy](https://github.com/vvidic/mjpeg-proxy) 
+This is the Dockerfile for the [mjpeg-proxy](https://github.com/vvidic/mjpeg-proxy)
 written by the User [vvidic](https://github.com/vvidic).
 
 ## How to use this image
@@ -9,14 +9,14 @@ written by the User [vvidic](https://github.com/vvidic).
 
 With arguments:
 
-```
+```shell
 $ docker run -it --rm -p 8080:8080 hafu/mjpeg-proxy-go mjpeg-proxy \
 -source http://source.stream.tld/stream.mjpg
 ```
 
 With sources file:
 
-```
+```shell
 $ cat sources.json
 [
    {
@@ -34,7 +34,7 @@ hafu/mjpeg-proxy-go mjpeg-proxy -sources /srv/sources.json
 
 ### Help of mjpeg-proxy
 
-```
+```text
 Usage of mjpeg-proxy:
   -bind string
         proxy bind address (default ":8080")
