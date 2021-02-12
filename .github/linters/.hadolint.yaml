@@ -1,0 +1,4 @@
+---
+ignored:
+  - DL3018  # Pin versions, we want updates to be more "secure"
+  - DL3017  # We want to update packages
