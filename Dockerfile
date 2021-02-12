@@ -11,7 +11,7 @@ RUN git clone $REPOSITORY . && \
     go build && \
     echo "$(git rev-parse --short HEAD) ($(git log -1 --format=%cd))" > .VERSION
 
-FROM alpine:latest
+FROM alpine:3
 RUN apk upgrade --available --no-cache
 RUN mkdir -p /usr/local/share/mjpeg-proxy
 RUN addgroup -S mjpegproxy && adduser -S mjpegproxy -G mjpegproxy
