@@ -1,7 +1,25 @@
 # mjpeg-proxy-go
 
 This is the Dockerfile for the [mjpeg-proxy](https://github.com/vvidic/mjpeg-proxy)
-written by the User [vvidic](https://github.com/vvidic).
+written by the user [vvidic](https://github.com/vvidic).
+
+## Sources
+
+Sources for the **Dockerfile**:
+- [GitHub](https://github.com/hafu/docker-mjpeg-proxy-go)
+- [GitLab](https://gitlab.com/hafu/docker-mjpeg-proxy-go)
+
+Sources for **mjpeg-proxy** can be found in the repository [mjpeg-proxy](https://github.com/vvidic/mjpeg-proxy)
+of the user [vvidic](https://github.com/vvidic).
+
+## Images
+
+Images can be pulled from the following container registries:
+- Docker Hub: `docker pull hafu/mjpeg-proxy-go`
+- GitHub Container Registry: `docker pull ghcr.io/hafu/mjpeg-proxy-go`
+- GitLab Container Registry: `docker pull registry.gitlab.com/hafu/docker-mjpeg-proxy-go/mjpeg-proxy-go`
+
+There only exists a `latest` image. It is rebuild once a week.
 
 ## How to use this image
 
