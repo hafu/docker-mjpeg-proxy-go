@@ -7,6 +7,7 @@ RUN echo $REPOSITORY && \
     apk add --no-cache git gcc musl-dev && \
     mkdir -p /usr/src/mjpeg-proxy
 WORKDIR /usr/src/mjpeg-proxy
+ENV CGO_CFLAGS=-fno-stack-protector
 RUN git clone $REPOSITORY . && \
     go build && \
     echo "$(git rev-parse --short HEAD) ($(git log -1 --format=%cd))" > .VERSION
