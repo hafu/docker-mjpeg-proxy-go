@@ -9,14 +9,12 @@ superlinter:
   stage: lint
   tags:
     - docker
-  image: github/super-linter:v3
+  image: ghcr.io/github/super-linter:slim-v4
   script:
-    - /action/lib/linter.sh
+    - "true"
   variables:
     RUN_LOCAL: "true"
-    DEFAULT_WORKSPACE: $CI_BUILDS_DIR
-    # ugly work around to use .hadolint.yml
-    DOCKERFILE_HADOLINT_FILE_NAME: "../../..$CI_PROJECT_DIR/.github/linters/.hadolint.yaml"
+    DEFAULT_WORKSPACE: $CI_BUILDS_DIR/$CI_PROJECT_PATH
   except:
     - schedules
 
