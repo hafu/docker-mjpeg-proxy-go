@@ -1,7 +1,7 @@
 ARG REPOSITORY=https://github.com/vvidic/mjpeg-proxy.git
 
 # build the binary
-FROM golang:alpine as builder
+FROM docker.io/golang:alpine as builder
 ARG REPOSITORY
 RUN echo $REPOSITORY && \
     apk add --no-cache git && \
@@ -11,7 +11,7 @@ RUN git clone $REPOSITORY . && \
     go build && \
     echo "$(git rev-parse --short HEAD) ($(git log -1 --format=%cd))" > .VERSION
 
-FROM alpine:3
+FROM docker.io/alpine:3
 RUN apk upgrade --available --no-cache && \
     mkdir -p /usr/local/share/mjpeg-proxy && \
     addgroup -S mjpegproxy && adduser -S mjpegproxy -G mjpegproxy
