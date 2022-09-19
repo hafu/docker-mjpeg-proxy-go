@@ -24,7 +24,7 @@ build and push image:
   stage: build
   tags:
     - docker
-  image: docker:19.03
+  image: docker:latest
   services:
     - docker:dind
   before_script:
