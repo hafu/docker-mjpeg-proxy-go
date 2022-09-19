@@ -15,7 +15,7 @@ of the user [vvidic](https://github.com/vvidic).
 ## Images
 
 Images can be pulled from the following container registries:
-- Docker Hub: `docker pull hafu/mjpeg-proxy-go`
+- Docker Hub: `docker pull docker.io/hafu/mjpeg-proxy-go`
 - GitHub Container Registry: `docker pull ghcr.io/hafu/mjpeg-proxy-go`
 - GitLab Container Registry: `docker pull registry.gitlab.com/hafu/docker-mjpeg-proxy-go/mjpeg-proxy-go`
 
@@ -47,7 +47,7 @@ $ cat sources.json
    }
 ]
 $ docker run -it --rm -p 8080:8080 -v $(pwd)/sources.json:/srv/sources.json:ro \
-hafu/mjpeg-proxy-go mjpeg-proxy -sources /srv/sources.json 
+hafu/mjpeg-proxy-go mjpeg-proxy -sources /srv/sources.json
 ```
 
 ### Help of mjpeg-proxy
