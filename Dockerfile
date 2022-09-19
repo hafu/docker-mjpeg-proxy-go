@@ -4,7 +4,7 @@ ARG REPOSITORY=https://github.com/vvidic/mjpeg-proxy.git
 FROM docker.io/golang:alpine as builder
 ARG REPOSITORY
 RUN echo $REPOSITORY && \
-    apk add --no-cache git && \
+    apk add --no-cache git gcc musl-dev && \
     mkdir -p /usr/src/mjpeg-proxy
 WORKDIR /usr/src/mjpeg-proxy
 RUN git clone $REPOSITORY . && \
