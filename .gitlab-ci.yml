@@ -9,7 +9,7 @@ stages:
 superlinter:
   stage: lint
   tags:
-    - docker
+    - gitlab-org-docker
   image: ghcr.io/github/super-linter:slim-v4
   script:
     - "true"
@@ -25,7 +25,7 @@ superlinter:
 build and push image:
   stage: build
   tags:
-    - docker
+    - gitlab-org-docker
   image: docker:latest
   services:
     - docker:dind
