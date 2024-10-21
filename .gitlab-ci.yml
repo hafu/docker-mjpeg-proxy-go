@@ -1,6 +1,6 @@
 ---
 variables:
-  BUILDX_VERSION: "v0.9.1"
+  BUILDX_VERSION: "v0.17.1"
 
 stages:
   - lint
