@@ -9,6 +9,7 @@ RUN echo $REPOSITORY && \
 WORKDIR /usr/src/mjpeg-proxy
 ENV CGO_CFLAGS=-fno-stack-protector
 RUN git clone $REPOSITORY . && \
+    go version && \
     go build && \
     echo "$(git rev-parse --short HEAD) ($(git log -1 --format=%cd))" > .VERSION
 
